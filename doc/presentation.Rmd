@@ -27,6 +27,8 @@ load("../data/generated/sample.rda")
 ```
 
 
+# Motivation
+
 ### The Preston Curve figure
 
 \begin{center}
@@ -138,7 +140,6 @@ cat(paste(latex_tab, collapse = "\n"))
 
 
 ### Conclusion
-
 
 Consider contributing to its repository and promote Open Science!
 
