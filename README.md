@@ -1,4 +1,4 @@
-## The TRR 266 Template for Reproducible Empirical Research 
+## All the material is belonged to the TRR 266 Template for Reproducible Empirical Research, "Research on Corporate Transparency" course
 
 This repository provides an infrastructure for open science oriented empirical projects. It is based on the [TREAT repository](https://github.com/trr266/treat) but uses World Bank data instead of WRDS data so that it can be used by everybody interested in reproducible empirical research. Currently, this is all R based but it is not meant to stay that way. You can help by contributing Python and/or Stata code that mimics the R analysis steps via pull requests.
 
@@ -26,8 +26,8 @@ Assuming that you have RStudio and make/Rtools installed, this should be relativ
 
 1. Download, clone or fork the repository to your local computing environment.
 2. Before building everything you most likely need to install additional packages. This repository follows the established principle not to install any packages automatically. This is your computing environment. You decide what you want to install. See the code below for installing the packages.
-4. Run 'make all' either via the console or by identifying the 'Build All' button in the 'Build' tab (normally in the upper right quadrant of the RStudio screen). 
-5. Eventually, you will be greeted with the two files in the output directory: "paper.pdf" and "presentation.pdf". Congratulations! You have successfully used an open science resource and reproduced our "analysis". Now modify it and make it your own project!
+3. Run 'make all' either via the console or by identifying the 'Build All' button in the 'Build' tab (normally in the upper right quadrant of the RStudio screen). 
+4. Eventually, you will be greeted with the two files in the output directory: "paper.pdf" and "presentation.pdf". Congratulations! You have successfully used an open science resource and reproduced our "analysis". Now modify it and make it your own project!
 
 If you do not see 'Build' tab this is most likely because you do not have 'make' installed on your system. 
   - For Windows: Install Rtools: https://cran.r-project.org/bin/windows/Rtools/
@@ -57,21 +57,6 @@ tinytex::install_tinytex()
 
 # That's all!
 ```
-
-### OK. That was fun. Bot how should I use the repo now?
-
-The basic idea is to clone the repository whenever you start a new project. If you are using GitHub, the simplest way to do this is to click on "Use this Template" above the file list. Then delete everything that you don't like and/or need. Over time, as you develop your own preferences, you can fork this repository and adjust it so that it becomes your very own template targeted to your very own preferences.
-
-
-### Why do you do abc in a certain way? I like to do things differently!
-
-Scientific workflows are a matter of preference and taste. What we present here is based on our experiences on what works well but this by no means implies that there are no other and better ways to do things. So, feel free to disagree and to build your own template. Or, even better: Convince us about your approach by submitting a pull request!
-
-
-### But there are other templates. Why yet another one?
-
-Of course there are and they a great. The reason why we decided to whip up our own is we wanted to have a template that is somewhat centered on workflows that are typical in the econ domain. Here you go.
-
 
 ### Licensing
 
