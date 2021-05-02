@@ -21,21 +21,22 @@ tab_desc_stat <- prepare_descriptive_table(
 )
 
 tab_corr <- prepare_correlation_table(
-  smp %>% select(-year, -ln_gdp_capita),
+  smp %>% select(-year, -gdp_capita),
   format = "latex", booktabs = TRUE, linesep = ""
 )
 
 tab_regression <-  prepare_regression_table(
   smp,
-  dvs = rep("life_expectancy", 4),
+  dvs = rep("life_expectancy", 5),
   idvs = list(
     c("ln_gdp_capita"),
     c("ln_gdp_capita", "unemployment"),
     c("ln_gdp_capita", "unemployment"),
+    c("ln_gdp_capita", "unemployment"),
     c("ln_gdp_capita", "unemployment")
   ),
-  feffects = list("", "", "year", c("country", "year")),
-  cluster = list("", "",  "year", c("country", "year")),
+  feffects = list("", "", "year","country", c("country", "year")),
+  cluster = list("", "",  "year","country", c("country", "year")),
   format = "latex"
 )
 
