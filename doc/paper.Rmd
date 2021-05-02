@@ -80,7 +80,7 @@ The data has been collected from the Open Data repository of the World Bank (htt
 
 Table \ref{tab:corr} reports the correlations between dependent and independent variables. As expected, it features a strong positive correlation between national income and life expectancy. The scatter plot, Figure \ref{fig:scatter}, visualizes this association.
 
-A multiple regression, including controls and general cross-sectional and time variance, is used to verify this association. As you can see in Table \ref{tab:reg}, the association between national income and life expectancy is significant at conventional levels across all specifications. However, regressions result in the country level is less significant than regression with year and none effects.
+A multiple regression, including controls and general cross-sectional and time variance, is used to verify this association. As you can see in Table \ref{tab:reg}, the association between national income and life expectancy is significant at conventional levels across all specifications. In addition, regressions result in the country level is more significant than regression results with year and none-effects.
 Please note that the magnitude of the association is significantly reduced once one controls for unobserved cross-sectional variation by including country-fixed effects. This result is not tabulated because the adjusted R-squared was negative.
 
 
