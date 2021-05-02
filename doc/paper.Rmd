@@ -1,17 +1,17 @@
 ---
 title: |
-  | A Template for Reproducible Empirical Research^[I acknowledge financial support from Deutsche Forschungsgemeinschaft-Project-ID 403041268 - TRR 266.] \vspace{1cm}
+  | A Template for Reproducible Empirical Research\vspace{1cm}
 
 author: |
-  | Joachim Gassen 
-  | TRR 266 "Accounting for Transparency"
-  | Humboldt-Universität zu Berlin 
+  | Javad Rajabalizadeh
+  | TRR 266/trer "Accounting for Transparency"
+  | University of Turku 
 
 date: |
   | `r loc <- Sys.getlocale(category = "LC_TIME"); Sys.setlocale("LC_TIME", "C"); fdate <- format(Sys.time(), '%B %e, %Y'); Sys.setlocale("LC_TIME", loc); fdate` \vspace{1cm}
   
 abstract: |
-  | This is a paper stub generated out of a template repository. It repliactes the association of national income per capita with life expectancy that has become known as the 'Preston Curve'. 
+  | I practiced a template repository to generate this paper. It replicates the "Preston Curve," which indicates the relationship between the national income per capita with a life expectancy. 
   | \vspace{8cm}
 
 bibliography: references.bib
@@ -22,7 +22,7 @@ output:
     number_sections: true
   toc: no
 fig_caption: yes
-fontsize: 11pt
+fontsize: 13pt
 ident: yes
 
 always_allow_html: yes
@@ -34,7 +34,7 @@ header-includes:
   - \setlength{\parskip}{0em}
   - \usepackage[hang,flushmargin]{footmisc}
   - \usepackage{caption} 
-  - \captionsetup[table]{skip=24pt,font=bf}
+  - \captionsetup[table]{skip=18pt,font=bf}
   - \usepackage{array}
   - \usepackage{threeparttable}
   - \usepackage{adjustbox}
@@ -60,9 +60,8 @@ load("../output/results.rda")
 
 # Introduction
   
-The scientific community widely agrees that reproduction, defined as reproducing findings using the same sample and method, and replication,  defined as retesting findings using a new sample while applying the same method, of empirical results are a central building block of  sound empirical evidence. Yet, although data and code repositories are on the rise, the additional materials only rarely lead to studies being directly reproducible. While several reasons for this observation have been discussed by prior literature, most commentators agree that the lack of established reproducible workflows makes reproductions and replications  inherently costly to do (@GGR2018). 
-
-On the GitHub repository of the TRR 266 "Accounting for Transparency", we host and maintain a repository (https://github.com/trer) that implements a bare-bones reproducible workflow. This paper stub is included in the repo and can be reproduced in its entirely by running the code included in the repository.
+The scientific community widely agrees that reproduction and replication of empirical results are a central building block of sound empirical evidence. The terms reproduction/reproducibility and replication/replicability" are often used interchangeably. However, reproducibility means obtaining consistent computational results using the same input data, computational steps, methods, code, and analysis conditions. Replicability means getting consistent results across studies to answer the same scientific question, each of which has obtained its data. Most commentators agree that the lack of established reproducible and replicable workflows makes reproductions and replications inherently costly to do (@GGR2018). 
+Please find the page address that fulfills some reproducible workflow (https://github.com/Rajabalizadeh).
 
 
 # The Preston Curve as a Case Study
