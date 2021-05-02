@@ -27,16 +27,15 @@ tab_corr <- prepare_correlation_table(
 
 tab_regression <-  prepare_regression_table(
   smp,
-  dvs = rep("life_expectancy", 5),
+  dvs = rep("life_expectancy", 4),
   idvs = list(
     c("ln_gdp_capita"),
     c("ln_gdp_capita", "unemployment"),
     c("ln_gdp_capita", "unemployment"),
-    c("ln_gdp_capita", "unemployment"),
     c("ln_gdp_capita", "unemployment")
   ),
-  feffects = list("", "", "year","country", c("country", "year")),
-  cluster = list("", "",  "year","country", c("country", "year")),
+  feffects = list("", "", "year","country"),
+  cluster = list("", "",  "year","country"),
   format = "latex"
 )
 
