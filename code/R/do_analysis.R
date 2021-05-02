@@ -5,13 +5,13 @@ library(ExPanDaR)
 load("data/generated/sample.rda")
 
 fig_scatter <- ggplot(
-  smp, aes(x = ln_gdp_capita, y = life_expectancy/unemployment, color = region)
+  smp, aes(x = ln_gdp_capita/unemployment, y = life_expectancy, color = region)
 ) +
   geom_point(alpha = 0.3) +
   labs(
     color = "World Bank Region",
-    x = "Ln(Income per capita in thsd. 2010 US−$)",
-    y = "Life expectancy in years to unemployment"
+    x = "Ln(Income per capita in thsd. 2010 US−$) to unemployment",
+    y = "Life expectancy in years"
   ) +
   theme_minimal()
 
