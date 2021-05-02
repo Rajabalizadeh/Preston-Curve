@@ -7,13 +7,25 @@ load("data/generated/sample.rda")
 fig_scatter <- ggplot(
   smp, aes(x = ln_gdp_capita, y = life_expectancy, color = region)
 ) +
-  geom_point(alpha = 0.3) +
+  geom_point(alpha = 1) +
   labs(
     color = "World Bank Region",
     x = "Ln(Income per capita in thsd. 2010 US-$)",
     y = "Life expectancy in years"
   ) +
   theme_minimal()
+
+fig_scatter <- ggplot(
+  smp, aes(x = unemployment, y = life_expectancy, color = region)
+) +
+  geom_point(alpha = 1) +
+  labs(
+    color = "World Bank Region",
+    x = "unemoloyment rate",
+    y = "Life expectancy in years"
+  ) +
+  theme_minimal()
+
 
 tab_desc_stat <- prepare_descriptive_table(
   smp %>% select(-year, -ln_gdp_capita)
