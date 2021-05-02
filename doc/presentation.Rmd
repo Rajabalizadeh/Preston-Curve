@@ -1,7 +1,7 @@
 ---
 title: "The Preston Curve Revisited"
-author: "Javad Rajabalizadeh"
-institute: "TRR 266/trer "Accounting for Transparency" course"
+author: "Joachim Gassen"
+institute: "TRR 266 Accounting for Transparency"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
   beamer_presentation: 
@@ -29,15 +29,15 @@ load("../data/generated/sample.rda")
 
 # Motivation
 
-### The Preston Curve figure
+### The Preston Curve
 
 \begin{center}
 \includegraphics[width=0.8\textwidth]{../media/preston_1975_p235.png} \\
-(Preston, 1975; p. 235)
+Preston (1975, p. 235)
 \end{center}
 
 
-### Descriptive Statistics
+### Data
 
 ```{r tab_descriptives_sample, results="asis"}
 desc_rnames <- paste0("\\textit{", smp_def$label[7:9], "}")
@@ -51,12 +51,10 @@ kable(
                      scientific=FALSE),
   booktabs = TRUE, escape = FALSE, linesep = ""
 ) -> kab_latex
-
 lat_tab <- unlist(strsplit(kab_latex, "\n"))
 lat_tab[6] <- "\\\\[-1.8ex]\\hline \\hline \\\\[-1.8ex]"
 lat_tab[8] <- "\\hline\\\\[-1.8ex]"
 lat_tab[length(lat_tab) - 2] <- "\\\\[-1.8ex]\\hline \\hline \\\\[-1.8ex]"
-
 latex_tab <- c(
   "\\begin{table}[!htbp]",  
   "\\resizebox{\\textwidth}{!}{",
@@ -66,7 +64,7 @@ latex_tab <- c(
   "\\begin{tablenotes}[flushleft]",
   "\\setlength{\\labelsep}{0pt}",
   sprintf(
-    "\\item Note: The data is obtained from the World Bank. (Sample: %d countries _ Period: %d to %d. \\textit{National Income per captia} values are in constant 2010 thousand U.S. dollars.", length(unique(smp$country)),
+    "\\item Note: The data is obtained from the World Bank. The sample covers %d countries and the period %d to %d. \\textit{National Income per captia} values are in constant 2010 thousand U.S. dollars.", length(unique(smp$country)),
     min(as.numeric(as.character(smp$year))), 
     max(as.numeric(as.character(smp$year)))
   ),
@@ -79,14 +77,14 @@ cat(paste(latex_tab, collapse = "\n"))
 ```
 
 
-### Life Expectancy by National Income scatter plot
+### Life Expectancy by National Income
 
 ```{r Scatter}
 fig_scatter
 ```
 
 
-### Correlation table
+### No presentation without correlation table...
 
 ``` {r CorrTable, results="asis"}
 tab <- tab_corr
@@ -108,7 +106,7 @@ cat(paste(latex_tab, collapse = "\n"))
 ```
 
 
-### Regression table
+### ... and regression table
 
 ``` {r RegTable, results="asis"}
 tab <- tab_regression$table
@@ -126,7 +124,6 @@ for (i in c(15, 18)) {
     tab[i], fixed(reg_names$var_name[pos]), reg_names$label[pos]
   )
 }
-
 latex_tab <- c(
   "\\begin{center}",
   "\\resizebox*{!}{0.8\\textheight}{",
@@ -141,11 +138,6 @@ cat(paste(latex_tab, collapse = "\n"))
 
 ### Conclusion
 
-Consider contributing to its repository and promote Open Science!
-
-
-
-
-
-
-
+- The Preston Curve is alive and well! 
+- Have fun adjusting this template to fit your research needs
+- Consider contributing to its repository and promote Open Science!
