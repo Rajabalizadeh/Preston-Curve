@@ -74,13 +74,10 @@ include_graphics("../media/preston_1975_p235.png")
 ```
 
 The analysis presented here is only demonstrate the workflow of the repository and not to contribute to the underlying question of causality between the national income
-and the life expectancy. 
-
-The data has been collected from the Open Data repository of the World Bank (https://data.worldbank.org). After selecting the sample, including country-year observations with non-missing values for all variables, I use the natural logarithm of GDP per capita to measure national income per capita to account for the underlying growth process that shapes national income. The Table \ref{tab:descriptives} shows descriptive statistics.
-
-Table \ref{tab:corr} reports the correlations between dependent and independent variables. As expected, it features a strong positive correlation between national income and life expectancy. The scatter plot, Figure \ref{fig:scatter}, visualizes this association.
+and the life expectancy. The data has been collected from the Open Data repository of the World Bank (https://data.worldbank.org). After selecting the sample, including country-year observations with non-missing values for all variables, I use the natural logarithm of GDP per capita to measure national income per capita to account for the underlying growth process that shapes national income. The Table \ref{tab:descriptives} shows descriptive statistics. Table \ref{tab:corr} reports the correlations between dependent and independent variables. As expected, it features a strong positive correlation between national income and life expectancy. The scatter plot, Figure \ref{fig:scatter}, visualizes this association.
 
 A multiple regression, including controls and general cross-sectional and time variance, is used to verify this association. As you can see in Table \ref{tab:reg}, the association between national income and life expectancy is significant at conventional levels across all specifications. In addition, regressions result in the country level is more significant than regression results with year and none-effects.
+
 Please note that the magnitude of the association is significantly reduced once one controls for unobserved cross-sectional variation by including country-fixed effects. This result is not tabulated because the adjusted R-squared was negative.
 
 
@@ -120,7 +117,7 @@ latex_tab <- c(
   "\\setlength{\\labelsep}{0pt}",
   "\\footnotetext",
   sprintf(
-    "\\item Note: The data is obtained from the World Bank. The sample covers %d countries and the period %d to %d. \\textit{National Income per captia} values are in constant 2010 thousand U.S. dollars.", length(unique(smp$country)),
+    "\\item Note: The data is obtained from the World Bank. Sample: %d countries / Period %d to %d. \\textit{National Income per captia} values are in constant 2010 thousand U.S. dollars.", length(unique(smp$country)),
     min(as.numeric(as.character(smp$year))), 
     max(as.numeric(as.character(smp$year)))
   ),
