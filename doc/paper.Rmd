@@ -91,10 +91,6 @@ The Preston curve is alive and well. While being simplistic, the presented analy
 fig_scatter
 ```
 
-```{r Scatter, echo = FALSE, fig.align="center", fig.cap="\\label{fig:scatter}National Income and Life Expectancy"}
-fig_scatter
-```
-
 ```{r tab_descriptives_sample, results="asis"}
 desc_rnames <- paste0("\\textit{", smp_def$label[7:9], "}")
 t <- tab_desc_stat
