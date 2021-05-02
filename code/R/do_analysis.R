@@ -17,7 +17,7 @@ fig_scatter <- ggplot(
 
 
 tab_desc_stat <- prepare_descriptive_table(
-  smp %>% select(-year, -ln_gdp_capita)
+  smp %>% select(-year, -gdp_capita)
 )
 
 tab_corr <- prepare_correlation_table(
@@ -27,7 +27,7 @@ tab_corr <- prepare_correlation_table(
 
 tab_regression <-  prepare_regression_table(
   smp,
-  dvs = rep("ln_life_expectancy", 4),
+  dvs = rep("life_expectancy", 4),
   idvs = list(
     c("ln_gdp_capita"),
     c("ln_gdp_capita", "unemployment"),
