@@ -34,7 +34,7 @@ tab_regression <-  prepare_regression_table(
     c("ln_gdp_capita", "unemployment"),
     c("ln_gdp_capita", "unemployment")
   ),
-  reffects = list("", "", "year","country"),
+  feffects = list("", "", "year","country"),
   cluster = list("", "",  "year","country"),
   format = "latex"
 )
