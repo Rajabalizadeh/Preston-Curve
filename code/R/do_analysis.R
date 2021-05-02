@@ -17,11 +17,11 @@ fig_scatter <- ggplot(
 
 
 tab_desc_stat <- prepare_descriptive_table(
-  smp %>% select(-country, -ln_gdp_capita)
+  smp %>% select(-year, -ln_gdp_capita)
 )
 
 tab_corr <- prepare_correlation_table(
-  smp %>% select(-country, -gdp_capita),
+  smp %>% select(-year, -gdp_capita),
   format = "latex", booktabs = TRUE, linesep = ""
 )
 
