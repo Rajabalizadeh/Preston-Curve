@@ -4,7 +4,7 @@ title: |
 
 author: |
   | Javad Rajabalizadeh
-  | TRR 266/trer "Accounting for Transparency"
+  | TRR 266 "Accounting for Transparency"
   | University of Turku 
 
 date: |
