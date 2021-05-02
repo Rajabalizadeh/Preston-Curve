@@ -1,6 +1,6 @@
 ---
 title: "The Preston Curve Revisited"
-author: "Joachim Gassen"
+author: "Javad Rajabalizadeh"
 institute: "TRR 266 Accounting for Transparency"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
@@ -37,7 +37,7 @@ Preston (1975, p. 235)
 \end{center}
 
 
-### Data
+### Descriptive Statistics
 
 ```{r tab_descriptives_sample, results="asis"}
 desc_rnames <- paste0("\\textit{", smp_def$label[7:9], "}")
@@ -84,7 +84,7 @@ fig_scatter
 ```
 
 
-### No presentation without correlation table...
+### Correlation table...
 
 ``` {r CorrTable, results="asis"}
 tab <- tab_corr
@@ -106,7 +106,7 @@ cat(paste(latex_tab, collapse = "\n"))
 ```
 
 
-### ... and regression table
+### Regression table
 
 ``` {r RegTable, results="asis"}
 tab <- tab_regression$table
@@ -138,6 +138,4 @@ cat(paste(latex_tab, collapse = "\n"))
 
 ### Conclusion
 
-- The Preston Curve is alive and well! 
-- Have fun adjusting this template to fit your research needs
-- Consider contributing to its repository and promote Open Science!
+Consider contributing to its repository and promote Open Science!
